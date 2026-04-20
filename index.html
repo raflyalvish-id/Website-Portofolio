@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Rafly Alviansyah - Data Analyst</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rafly Alviansyah - Data Analyst</title>
 
-    <!-- ICON -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- ICON -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <style>
+<style>
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Segoe UI', sans-serif;
     background: linear-gradient(135deg, #0f172a, #020617);
     color: white;
 }
@@ -27,27 +29,73 @@ nav {
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px);
-    background: rgba(15, 23, 42, 0.5);
+    background: rgba(15, 23, 42, 0.6);
+    z-index: 1000;
+}
+
+nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: white;
 }
 
 /* HERO */
 header {
     text-align: center;
-    padding: 80px 20px;
+    padding: 100px 20px;
     animation: fadeUp 1s ease;
 }
 
 header img {
-    width: 120px;
+    width: 130px;
     border-radius: 50%;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    border: 2px solid rgba(255,255,255,0.2);
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #94a3b8;
+}
+
+/* ICONS */
+.icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icons a {
+    color: #38bdf8;
+    font-size: 22px;
+    transition: 0.3s;
+}
+
+.icons a:hover {
+    color: white;
+    transform: scale(1.2);
 }
 
 /* SECTION */
 section {
-    padding: 80px 40px;
+    padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
+}
+
+h2 {
+    margin-bottom: 20px;
 }
 
 /* PROJECT GRID */
@@ -74,7 +122,6 @@ section {
     transform: translateY(0);
 }
 
-/* HOVER EFFECT */
 .project:hover {
     transform: translateY(-10px) scale(1.02);
 }
@@ -91,23 +138,31 @@ section {
     padding: 20px;
 }
 
-/* ICONS */
-.icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 15px;
+.content h3 {
+    margin-top: 0;
 }
 
-.icons a {
+.content p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+.content a {
     color: #38bdf8;
-    font-size: 24px;
-    transition: 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 10px;
 }
 
-.icons a:hover {
+.content a:hover {
     color: white;
-    transform: scale(1.2);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #64748b;
 }
 
 /* ANIMATION */
@@ -119,6 +174,13 @@ section {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 26px;
     }
 }
 </style>
@@ -136,14 +198,13 @@ section {
 <!-- HERO -->
 <header>
     <img src="images/me.png">
-    <h1>Muhammad Rafly Alviansyah</h1>
+    <h1>MUHAMMAD RAFLY ALVIANSYAH</h1>
     <p>Aspiring Data Analyst | SQL | Power BI | Python</p>
 
-    <!-- ICON -->
     <div class="icons">
         <a href="https://github.com/raflyalvish-id"><i class="fa-brands fa-github"></i></a>
         <a href="https://linkedin.com/in/raflyalvish/"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="#"><i class="fa-solid fa-envelope"></i></a>
+        <a href="mailto:muhraflyalviansyah@gmail.com"><i class="fa-solid fa-envelope"></i></a>
     </div>
 </header>
 
@@ -152,7 +213,7 @@ section {
     <h2>About Me</h2>
     <p>
         Data enthusiast with experience analyzing datasets of 10,000+ rows using SQL, Excel, and Python.
-        Passionate about transforming data into actionable business insights.
+        Passionate about transforming data into actionable business insights and building interactive dashboards.
     </p>
 </section>
 
@@ -167,17 +228,17 @@ section {
             <img src="images/dashboard-preview.png">
             <div class="content">
                 <h3>Customer Churn Analysis</h3>
-                <p>Analyzed customer data to identify high-risk churn segments.</p>
+                <p>Identified high-risk customer segments based on behavior patterns.</p>
                 <a href="https://github.com/raflyalvish-id/customer-churn-analysis">View Project</a>
             </div>
         </div>
 
-        <!-- SALARY (BELUM ADA GAMBAR) -->
+        <!-- SALARY -->
         <div class="project">
             <img src="https://via.placeholder.com/400x200">
             <div class="content">
                 <h3>Global Salary Dashboard</h3>
-                <p>Analyzed global salary trends across roles and countries.</p>
+                <p>Analyzed global salary trends across roles and regions.</p>
                 <a href="https://github.com/raflyalvish-id/global-salary-dashboard">View Project</a>
             </div>
         </div>
@@ -187,7 +248,7 @@ section {
             <img src="images/dashboard-preview.png">
             <div class="content">
                 <h3>AdventureWorks Dashboard</h3>
-                <p>Built interactive Power BI dashboard to monitor sales performance.</p>
+                <p>Interactive dashboard to monitor sales performance and KPIs.</p>
                 <a href="#">View Project</a>
             </div>
         </div>
@@ -195,7 +256,18 @@ section {
     </div>
 </section>
 
-    <script>
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: muhraflyalviansyah@gmail.com</p>
+</section>
+
+<footer>
+    <p>© 2026 Rafly Alviansyah</p>
+</footer>
+
+<!-- SCROLL ANIMATION -->
+<script>
 const projects = document.querySelectorAll('.project');
 
 const observer = new IntersectionObserver(entries => {
@@ -206,9 +278,8 @@ const observer = new IntersectionObserver(entries => {
     });
 });
 
-projects.forEach(project => {
-    observer.observe(project);
-});
+projects.forEach(project => observer.observe(project));
 </script>
+
 </body>
 </html>
