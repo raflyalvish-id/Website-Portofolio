@@ -2,24 +2,64 @@
 <html>
 <head>
     <title>Rafly Alviansyah - Data Analyst</title>
+
     <style>
         body {
+            margin: 0;
+            font-family: Arial;
             background-color: #0f172a;
             color: white;
-            font-family: Arial;
-            margin: 0;
         }
 
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            padding: 20px;
+            background: #0f172a;
+            position: sticky;
+            top: 0;
+        }
+
+        nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            font-size: 14px;
+            letter-spacing: 2px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HERO */
         header {
             text-align: center;
-            padding: 60px 20px;
+            padding: 80px 20px;
         }
 
+        header h1 {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        /* SECTION */
+        section {
+            padding: 60px 40px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        /* PROJECTS */
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
-            padding: 40px;
         }
 
         .project {
@@ -43,63 +83,101 @@
             padding: 20px;
         }
 
-        a {
-            color: #38bdf8;
-            text-decoration: none;
+        a.button {
             display: inline-block;
             margin-top: 10px;
+            color: #38bdf8;
+            text-decoration: none;
         }
 
         footer {
             text-align: center;
-            padding: 30px;
+            padding: 40px;
         }
     </style>
 </head>
 
 <body>
 
+<!-- NAVBAR -->
+<nav>
+    <a href="#about">ABOUT ME</a>
+    <a href="#portfolio">PORTFOLIO</a>
+    <a href="#contact">CONTACT</a>
+</nav>
+
+<!-- HERO -->
 <header>
-    <h1>Muhammad Rafly Alviansyah</h1>
+    <h1>MUHAMMAD RAFLY ALVIANSYAH</h1>
     <p>Aspiring Data Analyst | SQL | Power BI | Python</p>
 </header>
 
-<section class="projects">
+<!-- ABOUT -->
+<section id="about">
+    <h2>About Me</h2>
+    <p>
+        I am a highly analytical Geography Education graduate currently pursuing a Data Analyst and Business Intelligence bootcamp.
+        I have experience analyzing datasets with 10,000+ rows using SQL, Excel, and Python.
+    </p>
+    <p>
+        I specialize in transforming data into actionable insights through dashboards and data storytelling to support business decision-making.
+    </p>
+</section>
 
-    <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Churn Project">
-        <div class="content">
-            <h3>Customer Churn Analysis</h3>
-            <p>Analyzed 7,000+ customer data to identify high-risk churn segments.</p>
-            <p><strong>Tools:</strong> Python, Pandas, Matplotlib</p>
-            <a href="https://github.com/raflyalvish-id/customer-churn-analysis">GitHub</a>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+    <h2>Portfolio</h2>
+
+    <div class="projects">
+
+        <!-- CHURN -->
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200">
+            <div class="content">
+                <h3>Customer Churn Analysis</h3>
+                <p>Analyzed 7,000+ customer data to identify high-risk churn segments.</p>
+                <p><strong>Insight:</strong> Low-tenure customers have higher churn probability.</p>
+                <a class="button" href="https://github.com/raflyalvish-id/customer-churn-analysis">View Project</a>
+            </div>
         </div>
-    </div>
 
-    <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Salary Dashboard">
-        <div class="content">
-            <h3>Global Salary Dashboard</h3>
-            <p>Analyzed 10,000+ salary data across countries and roles.</p>
-            <p><strong>Tools:</strong> Excel, Power Query</p>
-            <a href="https://github.com/raflyalvish-id/global-salary-dashboard">GitHub</a>
+        <!-- SALARY -->
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200">
+            <div class="content">
+                <h3>Global Salary Dashboard</h3>
+                <p>Analyzed 10,000+ salary data across roles and countries.</p>
+                <p><strong>Insight:</strong> Remote roles show higher salary flexibility.</p>
+                <a class="button" href="https://github.com/raflyalvish-id/global-salary-dashboard">View Project</a>
+            </div>
         </div>
-    </div>
 
-    <div class="project">
-        <img src="https://via.placeholder.com/400x200" alt="Dashboard">
-        <div class="content">
-            <h3>Company Performance Dashboard</h3>
-            <p>Built interactive dashboard to monitor KPIs.</p>
-            <p><strong>Tools:</strong> Power BI</p>
-            <a href="#">View Project</a>
+        <!-- ADVENTURE WORKS -->
+        <div class="project">
+            <img src="https://via.placeholder.com/400x200">
+            <div class="content">
+                <h3>AdventureWorks Sales Dashboard</h3>
+                <p>Developed interactive Power BI dashboard to monitor sales performance.</p>
+                <p><strong>Insight:</strong> Certain regions underperform despite high product demand.</p>
+                <a class="button" href="#">View Project</a>
+            </div>
         </div>
-    </div>
 
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+    <h2>Contact</h2>
+    <p>Email: muhraflyalviansyah@gmail.com</p>
+    <p>
+        <a href="https://github.com/raflyalvish-id">GitHub</a> |
+        <a href="https://linkedin.com/in/raflyalvish/">LinkedIn</a>
+    </p>
 </section>
 
 <footer>
-    <p>Email: muhraflyalviansyah@gmail.com</p>
+    <p>© 2026 Rafly Alviansyah</p>
 </footer>
 
 </body>
