@@ -53,10 +53,13 @@ header {
 }
 
 header img {
-    width: 130px;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 20px;
-    border: 2px solid rgba(255,255,255,0.2);
+    border: 3px solid rgba(255,255,255,0.3);
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.4);
 }
 
 header h1 {
@@ -211,11 +214,55 @@ footer {
 <!-- ABOUT -->
 <section id="about">
     <h2>About Me</h2>
-    <p>
-        Data enthusiast with experience analyzing datasets of 10,000+ rows using SQL, Excel, and Python.
-        Passionate about transforming data into actionable business insights and building interactive dashboards.
+
+    <p style="color:#cbd5f5; line-height:1.7;">
+        I am an aspiring Data Analyst with a strong passion for transforming data into meaningful business insights. 
+        I have hands-on experience analyzing datasets, building interactive dashboards, and applying analytical techniques 
+        such as RFM segmentation and Market Basket Analysis.
+        <br><br>
+        I enjoy solving business problems using data and continuously improving my skills in analytics, visualization, and storytelling.
     </p>
+
+    <!-- SKILLS -->
+    <div style="margin-top:30px; display:flex; flex-wrap:wrap; gap:20px;">
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-database" style="color:#38bdf8;"></i>
+            <span>SQL</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-brands fa-python" style="color:#38bdf8;"></i>
+            <span>Python (Pandas, MLxtend)</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-chart-column" style="color:#38bdf8;"></i>
+            <span>Power BI</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-table" style="color:#38bdf8;"></i>
+            <span>Excel</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-chart-line" style="color:#38bdf8;"></i>
+            <span>Data Visualization</span>
+        </div>
+
+        <div style="display:flex; align-items:center; gap:10px;">
+            <i class="fa-solid fa-brain" style="color:#38bdf8;"></i>
+            <span>Analytical Thinking</span>
+        </div>
+
+    </div>
 </section>
+    <p style="margin-top:30px; color:#94a3b8;">
+    <i class="fa-solid fa-location-dot"></i> Indonesia  
+    &nbsp;&nbsp;
+    <i class="fa-solid fa-briefcase"></i> Open to Opportunities
+</p>
 
 <!-- PORTFOLIO -->
 <section id="portfolio">
@@ -270,6 +317,33 @@ footer {
     </div>
 </section>
 
+<!-- CERTIFICATES -->
+<section id="certificates">
+    <h2>Certificates</h2>
+
+    <div class="projects">
+
+        <div class="project">
+            <img src="images/certificate1.png">
+            <div class="content">
+                <h3>Data Analytics Bootcamp</h3>
+                <p>Dibimbing.id - Completed data analytics training including SQL, Python, and Power BI.</p>
+                <a href="#">View Certificate</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <img src="images/certificate2.png">
+            <div class="content">
+                <h3>SQL for Data Analysis</h3>
+                <p>Learned data querying, joins, aggregation, and data manipulation.</p>
+                <a href="#">View Certificate</a>
+            </div>
+        </div>
+
+    </div>
+</section>
+    
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
