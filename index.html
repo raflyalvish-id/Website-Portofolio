@@ -56,7 +56,7 @@ nav a:hover {
     color: white;
 }
 
-/* NEW: TWO-COLUMN HERO & ABOUT SECTION */
+/* TWO-COLUMN HERO & ABOUT SECTION */
 .hero-about {
     display: flex;
     align-items: flex-start;
@@ -181,7 +181,7 @@ h2 {
     padding-left: 15px;
 }
 
-/* EXPERIENCE CARD */
+/* NEW: EXPERIENCE CARD STYLE (CV LIKE) */
 .experience-card {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(12px);
@@ -192,6 +192,9 @@ h2 {
     transition: 0.4s;
     opacity: 0;
     transform: translateY(30px);
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
 }
 
 .experience-card.show {
@@ -202,6 +205,21 @@ h2 {
 .experience-card:hover {
     border-color: rgba(56, 189, 248, 0.4);
     background: rgba(255, 255, 255, 0.05);
+}
+
+/* Logo holder */
+.experience-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: white;
+    padding: 5px;
+    flex-shrink: 0;
+}
+
+.experience-content {
+    flex: 1;
 }
 
 .experience-header {
@@ -251,7 +269,7 @@ h2 {
     gap: 30px;
 }
 
-/* GLASS CARD */
+/* GLASS CARD (PORTFOLIO & CERTIFICATES) */
 .project {
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(12px);
@@ -366,6 +384,11 @@ footer {
         flex-wrap: wrap;
     }
 
+    .experience-card {
+        flex-direction: column;
+        gap: 15px;
+    }
+
     .experience-header {
         flex-direction: column;
         gap: 10px;
@@ -414,7 +437,7 @@ footer {
             I am a highly detail-oriented Data Analyst passionate about structured problem-solving, <b>growth optimization</b>, and spatial data analysis. Backed by my Best Graduate achievement in Geography Education and comprehensive training at Data Analyst & Business Intelligence Dibimbing.id, I enjoy uncovering the hidden story behind the numbers to drive data-driven decision-making.
         </p>
         <p>
-            Throughout my career and project experience, I have managed 10,000+ rows of structured business datasets, engineered 2M+ rows star schema analytics architecture, automated ETL pipelines using PostgreSQL, and analyzed massive datasets. Currently, I am actively leveraging my analytical foundation to transition into a <b>Growth Analyst</b> role, aiming to formulate strategic business expansion and optimize operational efficiency.
+            Drawing from my experience in retail operations and spatial data analysis, I specialize in transforming complex datasets into strategic business insights. My background includes engineering a 2M+ rows star schema analytics architecture, evaluating multi-channel retail performance, and navigating centralized ERP systems (Odoo) to integrate operational workflows. I am currently leveraging this solid analytical foundation to transition into a Growth Analyst role, aiming to drive strategic market expansion and maximize revenue opportunities.
         </p>
 
         <!-- SKILLS -->
@@ -458,41 +481,51 @@ footer {
     </div>
 </section> 
 
-<!-- NEW: WORKING EXPERIENCE SECTION -->
+<!-- WORKING EXPERIENCE SECTION -->
 <section id="experience">
     <h2>Working Experience</h2>
 
     <!-- EXPERIENCE 1: HYPEFAST -->
-    <div class="experience-card project">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>Retail Operations Data Analyst (Freelance)</h3>
-                <h4>Hypefast</h4>
+    <div class="experience-card show">
+        <!-- Simpan logo Hypefast di folder images dengan nama hypefast_logo.png. Jika belum ada, ikon cadangan akan otomatis muncul -->
+        <img src="images/hypefast_logo.png" alt="Hypefast Logo" class="experience-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2830/2830305.png';">
+        <div class="experience-content">
+            <div class="experience-header">
+                <div class="experience-title">
+                    <h3>Retail Operations Data Analyst (Freelance)</h3>
+                    <h4>PT. Hypefast Karya Nusantara</h4>
+                </div>
+                <div class="experience-date">Jul 2026 – Present</div>
             </div>
-            <div class="experience-date">Jul 2026 – Present</div>
-        </div>
-        <div class="experience-body">
-            <ul>
-                <li>Analyzing comprehensive operational data to monitor inventory turnover, supply chain efficiency, and overall retail performance across multiple channels.</li>
-                <li>Leveraging quantitative insights to formulate business strategies, optimize end-to-end retail operations, and build a strong foundation for future growth initiatives.</li>
-            </ul>
+            <div class="experience-body">
+                <ul>
+                    <li>Analyzing comprehensive operational data to monitor inventory turnover, supply chain efficiency, and overall retail performance across multiple channels.</li>
+                    <li>Leveraging quantitative insights to formulate business strategies, optimize end-to-end retail operations, and build a strong foundation for future growth initiatives.</li>
+                    <li>Collaborating on the operational migration process to a centralized ERP system utilizing Odoo to streamline and integrate business workflows.</li>
+                </ul>
+            </div>
         </div>
     </div>
 
     <!-- EXPERIENCE 2: MATA ANGIN -->
-    <div class="experience-card project">
-        <div class="experience-header">
-            <div class="experience-title">
-                <h3>Data Analyst</h3>
-                <h4>Mata Angin Outdoor</h4>
+    <div class="experience-card show">
+        <!-- Simpan logo Mata Angin di folder images dengan nama mata_angin_logo.png. Jika belum ada, ikon cadangan otomatis muncul -->
+        <img src="images/mata_angin_logo.png" alt="Mata Angin Logo" class="experience-logo" onerror="this.src='https://cdn-icons-png.flaticon.com/512/2830/2830305.png';">
+        <div class="experience-content">
+            <div class="experience-header">
+                <div class="experience-title">
+                    <h3>Data Analyst (Freelance)</h3>
+                    <h4>Mata Angin Adventure (Outdoor Rental UMKM)</h4>
+                </div>
+                <div class="experience-date">May 2026 – Jul 2026</div>
             </div>
-            <div class="experience-date">Previous Role</div>
-        </div>
-        <div class="experience-body">
-            <ul>
-                <li>Constructed systematic inventory trackers and analyzed historical sales trends to improve asset management efficiency.</li>
-                <li>Designed operational tracking frameworks to optimize cash flow monitoring and localized employee KPI metrics.</li>
-            </ul>
+            <div class="experience-body">
+                <ul>
+                    <li>Analyzed company cash flow and historical sales trends using advanced Excel to identify high-margin rental equipment, optimizing inventory turnover and strategic revenue tracking.</li>
+                    <li>Engineered a dynamic data-driven tracking system to monitor real-time inventory availability and equipment conditions (rented, washing, damaged), reducing data discrepancies and stockouts.</li>
+                    <li>Developed and evaluated employee performance metrics utilizing a structured KPI framework to ensure daily operational efficiency and maintain service reliability.</li>
+                </ul>
+            </div>
         </div>
     </div>
 </section>
@@ -502,43 +535,41 @@ footer {
     <h2>Portfolio</h2>
 
     <div class="projects">
-
-        <!-- NEW PROJECT: ZOMATO LOGISTICS BOTTLENECK ANALYSIS -->
-        <div class="project">
-            <img src="images/Zomato.png" alt="Zomato Logistics Bottleneck Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
-            <div class="content">
-                <span style="font-size: 11px; background: #10b981; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Latest Project</span>
-                <h3 style="margin-top: 10px;">Zomato Logistics Bottleneck Analysis</h3>
-                <p>
-                    Analyzed 45K+ delivery transactions to uncover the impact of multi-batching and traffic density on SLAs and customer ratings. Formulated dynamic batching and fleet reallocation strategies to unlock daily order growth.
-                </p>
-                <a href="https://github.com/raflyalvish-id/Take-Home-Test-Rafly" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
-            </div>
-        </div>
-      
+    
         <!-- PROJECT: E-COMMERCE FUNNEL & BEHAVIORAL ANALYTICS -->
         <div class="project">
             <img src="images/invora_analytics.png" alt="Funnel & Behavioral Analytics Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
                 <span style="font-size: 11px; background: #0284c7; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Featured Project</span>
-                <h3 style="margin-top: 10px;">E-Commerce Funnel & Behavioral Analytics (INVORA)</h3>
+                <h3 style="margin-top: 10px;">E-Commerce Funnel & Behavioral Analytics </h3>
                 <p>
                     Diagnosed sales anomalies across 2M+ interaction data rows by building a Star Schema data model. Identified a critical 63.73% Cart Abandonment Rate and isolated initial View-to-Click conversion gaps to formulate strategic business growth initiatives.
                 </p>
                 <a href="https://github.com/raflyalvish-id/E-Commerce-Funnel-Behavioral-Analytics" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
-
-        <!-- NEW PROJECT: MATA ANGIN ONGOING FRAMEWORK -->
+      
+         <!-- CUSTOMER BEHAVIOR -->
         <div class="project">
-            <img src="images/mata_angin.png" alt="Mata Angin Framework Preview" onerror="this.src='images/Preview-dashboard.png';">
+            <img src="images/customer_behavior.png" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
-                <span style="font-size: 11px; background: #ea580c; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Work in Progress</span>
-                <h3 style="margin-top: 10px;">Operational & Revenue Tracking Framework</h3>
+                <h3>Customer Behavior & Sales Analysis</h3>
                 <p>
-                    Designing an end-to-end inventory turnover and real-time tracking architecture for asset management (rented, washing, damaged status). Developing structural cash flow trend models.
+                    End-to-end analysis using RFM segmentation and Market Basket Analysis to identify revenue drivers and product bundling opportunities.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Operational-Revenue-Tracking-Framework-Mata-Angin-Work-in-Progress-" target="_blank">Ongoing Assessment Phase <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
+                <a href="https://github.com/raflyalvish-id/Customer-Behavior-Product-Association-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
+            </div>
+        </div>
+      
+        <!-- SOCIAL MEDIA ENGAGEMENT ANALYSIS -->
+        <div class="project">
+            <img src="images/social_media_preview.png" alt="Social Media Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
+            <div class="content">
+                <h3>Social Media Cross-Platform Analytics</h3>
+                <p>
+                    Evaluated 726K+ interactions across X, Instagram, TikTok, and YouTube using advanced DAX modeling. Analyzed organic vs. paid efficiency, content formats, and audience behavior trends.
+                </p>
+                <a href="https://github.com/raflyalvish-id/Social-Media-Multichannel-Engagement-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
       
@@ -554,29 +585,18 @@ footer {
             </div>
         </div>
 
-        <!-- CUSTOMER BEHAVIOR -->
+      <!-- LATEST PROJECT: ZOMATO LOGISTICS BOTTLENECK ANALYSIS -->
         <div class="project">
-            <img src="images/customer_behavior.png" onerror="this.src='images/Preview-dashboard.png';">
+            <img src="images/Zomato.png" alt="Zomato Logistics Bottleneck Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
-                <h3>Customer Behavior & Sales Analysis</h3>
+                <h3 style="margin-top: 10px;">Zomato Logistics Bottleneck Analysis</h3>
                 <p>
-                    End-to-end analysis using RFM segmentation and Market Basket Analysis to identify revenue drivers and product bundling opportunities.
+                    Analyzed 45K+ delivery transactions to uncover the impact of multi-batching and traffic density on SLAs and customer ratings. Formulated dynamic batching and fleet reallocation strategies to unlock daily order growth.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Customer-Behavior-Product-Association-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
+                <a href="https://github.com/raflyalvish-id/Take-Home-Test-Rafly" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
-
-      <!-- SOCIAL MEDIA ENGAGEMENT ANALYSIS -->
-        <div class="project">
-            <img src="images/social_media_preview.png" alt="Social Media Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
-            <div class="content">
-                <h3>Social Media Cross-Platform Analytics</h3>
-                <p>
-                    Evaluated 726K+ interactions across X, Instagram, TikTok, and YouTube using advanced DAX modeling. Analyzed organic vs. paid efficiency, content formats, and audience behavior trends.
-                </p>
-                <a href="https://github.com/raflyalvish-id/Social-Media-Multichannel-Engagement-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
-            </div>
-        </div>
+      
       
       <!-- GOOGLE CAMPAIGN PERFORMANCE ANALYSIS -->
         <div class="project">
@@ -730,7 +750,7 @@ footer {
 
 <!-- SCROLL ANIMATION -->
 <script>
-const elementsToAnimate = document.querySelectorAll('.project');
+const elementsToAnimate = document.querySelectorAll('.project, .experience-card');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
