@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rafly Alviansyah - Data Analyst</title>
+<title>Rafly Alviansyah - Data Analyst & Growth Analyst</title>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-5G9CS25VKQ"></script>
@@ -34,13 +34,14 @@ body {
 nav {
     display: flex;
     justify-content: center;
-    gap: 40px;
+    gap: 30px;
     padding: 20px;
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px);
-    background: rgba(15, 23, 42, 0.6);
+    background: rgba(15, 23, 42, 0.8);
     z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
 nav a {
@@ -55,77 +56,213 @@ nav a:hover {
     color: white;
 }
 
-/* HERO */
-header {
-    text-align: center;
-    padding: 100px 20px;
+/* NEW: TWO-COLUMN HERO & ABOUT SECTION */
+.hero-about {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 60px;
+    padding: 120px 20px 80px;
+    max-width: 1100px;
+    margin: auto;
     animation: fadeUp 1s ease;
 }
 
-header img {
-    width: 200px;
+.profile-side {
+    flex: 1;
+    text-align: center;
+    position: sticky;
+    top: 120px;
+}
+
+.profile-side img {
+    width: 220px;
     height: auto;
     border-radius: 20px;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
 }
 
-header h1 {
-    font-size: 36px;
-    margin-bottom: 10px;
+.profile-side h1 {
+    font-size: 28px;
+    margin: 20px 0 10px;
+    line-height: 1.2;
 }
 
-header p {
-    color: #94a3b8;
+.profile-side .title {
+    color: #38bdf8;
+    font-weight: 600;
+    margin-bottom: 5px;
+    font-size: 16px;
 }
 
-/* ICONS */
+.profile-side .subtitle {
+    font-size: 13px;
+    color: #64748b;
+    margin-top: 5px;
+    padding: 0 10px;
+}
+
 .icons {
-    margin-top: 20px;
+    margin-top: 25px;
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
 .icons a {
-    color: #38bdf8;
-    font-size: 22px;
+    color: #94a3b8;
+    font-size: 24px;
     transition: 0.3s;
 }
 
 .icons a:hover {
-    color: white;
+    color: #38bdf8;
     transform: scale(1.2);
 }
 
-/* SECTION */
-section {
+.about-side {
+    flex: 2;
+}
+
+.about-side h2 {
+    margin-top: 0;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.about-side p {
+    color: #cbd5f5;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 15px;
+}
+
+.skills-grid {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid rgba(255,255,255,0.05);
+    font-size: 14px;
+}
+
+.status-bar {
+    margin-top: 40px;
+    display: flex;
+    gap: 30px;
+    color: #94a3b8;
+    font-size: 14px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* GENERAL SECTION STYLE */
+section:not(.hero-about) {
     padding: 80px 20px;
     max-width: 1000px;
     margin: auto;
 }
 
 h2 {
-    margin-bottom: 20px;
+    font-size: 28px;
+    margin-bottom: 30px;
+    border-left: 4px solid #38bdf8;
+    padding-left: 15px;
+}
+
+/* EXPERIENCE CARD */
+.experience-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.experience-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.experience-card:hover {
+    border-color: rgba(56, 189, 248, 0.4);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.experience-title h3 {
+    margin: 0 0 5px 0;
+    color: #38bdf8;
+    font-size: 20px;
+}
+
+.experience-title h4 {
+    margin: 0;
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.experience-date {
+    color: #94a3b8;
+    font-size: 14px;
+    background: rgba(255,255,255,0.05);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.experience-body ul {
+    color: #cbd5f5;
+    line-height: 1.8;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.experience-body li {
+    margin-bottom: 8px;
 }
 
 /* PROJECT GRID */
 .projects {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
 }
 
 /* GLASS CARD */
 .project {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(12px);
     border-radius: 15px;
     overflow: hidden;
-    border: 1px solid rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.08);
     transition: 0.4s;
     opacity: 0;
     transform: translateY(30px);
+    display: flex;
+    flex-direction: column;
 }
 
 .project.show {
@@ -134,36 +271,46 @@ h2 {
 }
 
 .project:hover {
-    transform: translateY(-10px) scale(1.02);
+    transform: translateY(-10px);
+    border-color: rgba(56, 189, 248, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
 }
 
-/* IMAGE */
 .project img {
     width: 100%;
-    height: 180px;
+    height: 190px;
     object-fit: cover;
     pointer-events: none; 
 }
 
-/* CONTENT */
 .content {
-    padding: 20px;
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .content h3 {
-    margin-top: 0;
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 1.4;
 }
 
 .content p {
     color: #94a3b8;
     font-size: 14px;
+    line-height: 1.6;
+    flex: 1;
 }
 
 .content a {
     color: #38bdf8;
     text-decoration: none;
+    font-weight: 600;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 15px;
+    font-size: 14px;
+    transition: 0.2s;
 }
 
 .content a:hover {
@@ -175,6 +322,7 @@ footer {
     text-align: center;
     padding: 40px;
     color: #64748b;
+    border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 /* ANIMATION */
@@ -190,9 +338,42 @@ footer {
 }
 
 /* RESPONSIVE */
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 26px;
+@media (max-width: 850px) {
+    .hero-about {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 80px;
+        gap: 40px;
+    }
+    
+    .profile-side {
+        position: relative;
+        top: 0;
+        margin: auto;
+    }
+    
+    .about-side h2 {
+        text-align: center;
+        border-left: none;
+        border-bottom: 2px solid #38bdf8;
+        padding-left: 0;
+        padding-bottom: 10px;
+        display: inline-block;
+    }
+    
+    .status-bar {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .experience-header {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
     }
 }
 </style>
@@ -203,91 +384,118 @@ footer {
 <!-- NAVBAR -->
 <nav>
     <a href="#about">ABOUT</a>
+    <a href="#experience">EXPERIENCE</a>
     <a href="#portfolio">PORTFOLIO</a>
     <a href="#certificates">CERTIFICATES</a>
     <a href="#contact">CONTACT</a>
 </nav>
 
-<!-- HERO -->
-<header>
-    <img src="images/me.png">
-    <h1>MUHAMMAD RAFLY ALVIANSYAH</h1>
-    <p>Data Analyst | Business Intelligence</p>
-    <p style="font-size:13px; color:#64748b; margin-top:10px;">
-    Focused on customer analytics, business insights, and data-driven decision making</p>
+<!-- HERO & ABOUT (COMBINED TWO-COLUMN) -->
+<section id="about" class="hero-about">
+    
+    <!-- LEFT SIDE: PROFILE -->
+    <div class="profile-side">
+        <img src="images/me.png" alt="Rafly Alviansyah">
+        <h1>MUHAMMAD RAFLY ALVIANSYAH</h1>
+        <p class="title">Data Analyst | Growth Analyst</p>
+        <p class="subtitle">Focused on customer analytics, business expansion, and data-driven decision making</p>
 
-    <div class="icons">
-        <a href="https://github.com/raflyalvish-id"><i class="fa-brands fa-github"></i></a>
-        <a href="https://linkedin.com/in/raflyalvish/"><i class="fa-brands fa-linkedin"></i></a>
-        <a href="mailto:muhraflyalviansyah@gmail.com"><i class="fa-solid fa-envelope"></i></a>
-    </div>
-</header>
-
-<!-- ABOUT -->
-<section id="about">
-    <h2>About Me</h2>
-
-    <p style="color:#cbd5f5; line-height:1.7;">
-        I am a highly detail-oriented Data Analyst passionate about structured problem-solving and spatial data analysis, 
-        backed by my Best Graduate achievement in Geography Education and training at bootcamp Data Analyst & Business Intelligence Dibimbing.id. 
-        I enjoy uncovering the story behind the numbers to drive data-driven decision-making.   
-        <br><br>
-        Throughout my career and project experience, I have managed 10,000+ rows of structured business datasets, 
-        engineered 2M+ rows star schema analytics architecture, automated ETL pipelines using PostgreSQL, and analyzed massive datasets, including 726,000+ social media engagement points. 
-        With proficiency in Python, Power BI, Tableau, Looker Studio, SQL, and advanced Excel.
-        <br><br>
-        I am currently leveraging my skills as a Freelance Data Analyst to deliver actionable insights and optimize operational efficiency.
-    </p>
-
-    <!-- SKILLS -->
-    <div style="margin-top:30px; display:flex; flex-wrap:wrap; gap:20px;">
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-solid fa-database" style="color:#38bdf8;"></i>
-            <span>SQL (PostgreSQL, MySQL)</span>
+        <div class="icons">
+            <a href="https://github.com/raflyalvish-id" target="_blank"><i class="fa-brands fa-github"></i></a>
+            <a href="https://linkedin.com/in/raflyalvish/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="mailto:muhraflyalviansyah@gmail.com"><i class="fa-solid fa-envelope"></i></a>
         </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-brands fa-python" style="color:#38bdf8;"></i>
-            <span>Python (Pandas, NumPy)</span>
-        </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-solid fa-chart-column" style="color:#38bdf8;"></i>
-            <span>Power BI, Tableau & Looker Studio</span>
-        </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-solid fa-table" style="color:#38bdf8;"></i>
-            <span>Advanced Excel / Google Sheets</span>
-        </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-solid fa-chart-line" style="color:#38bdf8;"></i>
-            <span>ETL Pipeline & Data Modeling</span>
-        </div>
-
-        <div style="display:flex; align-items:center; gap:10px;">
-            <i class="fa-solid fa-brain" style="color:#38bdf8;"></i>
-            <span>Business Intelligence & KPI Mapping</span>
-        </div>
-
-    </div>
-                                                                                
-<div style="margin-top:30px; display:flex; justify-content:center; gap:30px; color:#94a3b8; font-size:14px;">
-
-    <div style="display:flex; align-items:center; gap:8px;">
-        <i class="fa-solid fa-location-dot" style="color:#38bdf8;"></i>
-        <span>Based in Indonesia</span>
     </div>
 
-    <div style="display:flex; align-items:center; gap:8px;">
-        <i class="fa-solid fa-briefcase" style="color:#38bdf8;"></i>
-        <span>Open to Opportunities</span>
-    </div>
+    <!-- RIGHT SIDE: ABOUT TEXT & SKILLS -->
+    <div class="about-side">
+        <h2>About Me</h2>
+        <p>
+            I am a highly detail-oriented Data Analyst passionate about structured problem-solving, <b>growth optimization</b>, and spatial data analysis. Backed by my Best Graduate achievement in Geography Education and comprehensive training at Data Analyst & Business Intelligence Dibimbing.id, I enjoy uncovering the hidden story behind the numbers to drive data-driven decision-making.
+        </p>
+        <p>
+            Throughout my career and project experience, I have managed 10,000+ rows of structured business datasets, engineered 2M+ rows star schema analytics architecture, automated ETL pipelines using PostgreSQL, and analyzed massive datasets. Currently, I am actively leveraging my analytical foundation to transition into a <b>Growth Analyst</b> role, aiming to formulate strategic business expansion and optimize operational efficiency.
+        </p>
 
-</div>
+        <!-- SKILLS -->
+        <div class="skills-grid">
+            <div class="skill-item">
+                <i class="fa-solid fa-database" style="color:#38bdf8;"></i>
+                <span>SQL (PostgreSQL, MySQL)</span>
+            </div>
+            <div class="skill-item">
+                <i class="fa-brands fa-python" style="color:#38bdf8;"></i>
+                <span>Python (Pandas, NumPy)</span>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-chart-column" style="color:#38bdf8;"></i>
+                <span>Power BI & Tableau</span>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-table" style="color:#38bdf8;"></i>
+                <span>Advanced Excel</span>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-chart-line" style="color:#38bdf8;"></i>
+                <span>ETL & Data Modeling</span>
+            </div>
+            <div class="skill-item">
+                <i class="fa-solid fa-rocket" style="color:#38bdf8;"></i>
+                <span>Growth Metrics & KPI</span>
+            </div>
+        </div>
+                                                                         
+        <div class="status-bar">
+            <div style="display:flex; align-items:center; gap:8px;">
+                <i class="fa-solid fa-location-dot" style="color:#38bdf8;"></i>
+                <span>Based in Indonesia</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:8px;">
+                <i class="fa-solid fa-briefcase" style="color:#38bdf8;"></i>
+                <span>Open to Full-Time Opportunities</span>
+            </div>
+        </div>
+    </div>
 </section> 
+
+<!-- NEW: WORKING EXPERIENCE SECTION -->
+<section id="experience">
+    <h2>Working Experience</h2>
+
+    <!-- EXPERIENCE 1: HYPEFAST -->
+    <div class="experience-card project">
+        <div class="experience-header">
+            <div class="experience-title">
+                <h3>Retail Operations Data Analyst (Freelance)</h3>
+                <h4>Hypefast</h4>
+            </div>
+            <div class="experience-date">Jul 2026 – Present</div>
+        </div>
+        <div class="experience-body">
+            <ul>
+                <li>Analyzing comprehensive operational data to monitor inventory turnover, supply chain efficiency, and overall retail performance across multiple channels.</li>
+                <li>Leveraging quantitative insights to formulate business strategies, optimize end-to-end retail operations, and build a strong foundation for future growth initiatives.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE 2: MATA ANGIN -->
+    <div class="experience-card project">
+        <div class="experience-header">
+            <div class="experience-title">
+                <h3>Data Analyst</h3>
+                <h4>Mata Angin Outdoor</h4>
+            </div>
+            <div class="experience-date">Previous Role</div>
+        </div>
+        <div class="experience-body">
+            <ul>
+                <li>Constructed systematic inventory trackers and analyzed historical sales trends to improve asset management efficiency.</li>
+                <li>Designed operational tracking frameworks to optimize cash flow monitoring and localized employee KPI metrics.</li>
+            </ul>
+        </div>
+    </div>
+</section>
     
 <!-- PORTFOLIO -->
 <section id="portfolio">
@@ -295,51 +503,42 @@ footer {
 
     <div class="projects">
 
-
         <!-- NEW PROJECT: ZOMATO LOGISTICS BOTTLENECK ANALYSIS -->
         <div class="project">
             <img src="images/Zomato.png" alt="Zomato Logistics Bottleneck Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
-                <span style="font-size: 11px; background: #10b981; padding: 2px 8px; border-radius: 10px; font-weight: bold; vertical-align: middle;">Latest Project</span>
-                <h3 style="margin-top: 8px;">Zomato Logistics Bottleneck Analysis</h3>
+                <span style="font-size: 11px; background: #10b981; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Latest Project</span>
+                <h3 style="margin-top: 10px;">Zomato Logistics Bottleneck Analysis</h3>
                 <p>
                     Analyzed 45K+ delivery transactions to uncover the impact of multi-batching and traffic density on SLAs and customer ratings. Formulated dynamic batching and fleet reallocation strategies to unlock daily order growth.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Take-Home-Test-Rafly" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/Take-Home-Test-Rafly" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
       
         <!-- PROJECT: E-COMMERCE FUNNEL & BEHAVIORAL ANALYTICS -->
         <div class="project">
-            <!-- Tip: Taruh screenshoot slide showcase/dashboard kamu dengan nama 'invora_analytics.png' di folder images -->
             <img src="images/invora_analytics.png" alt="Funnel & Behavioral Analytics Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
-                <span style="font-size: 11px; background: #0284c7; padding: 2px 8px; border-radius: 10px; font-weight: bold; vertical-align: middle;">Featured Project</span>
-                <h3 style="margin-top: 8px;">E-Commerce Funnel & Behavioral Analytics (INVORA)</h3>
+                <span style="font-size: 11px; background: #0284c7; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Featured Project</span>
+                <h3 style="margin-top: 10px;">E-Commerce Funnel & Behavioral Analytics (INVORA)</h3>
                 <p>
                     Diagnosed sales anomalies across 2M+ interaction data rows by building a Star Schema data model. Identified a critical 63.73% Cart Abandonment Rate and isolated initial View-to-Click conversion gaps to formulate strategic business growth initiatives.
                 </p>
-                <!-- Sesuaikan link di bawah ini dengan nama repository github barumu -->
-                <a href="https://github.com/raflyalvish-id/E-Commerce-Funnel-Behavioral-Analytics" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/E-Commerce-Funnel-Behavioral-Analytics" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
 
         <!-- NEW PROJECT: MATA ANGIN ONGOING FRAMEWORK -->
         <div class="project">
-            <img src="images/mata_angin.png" alt="Mata Angin Framework Preview">
+            <img src="images/mata_angin.png" alt="Mata Angin Framework Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
-                <span style="font-size: 11px; background: #ea580c; padding: 2px 8px; border-radius: 10px; font-weight: bold; vertical-align: middle;">Work in Progress</span>
-                <h3 style="margin-top: 8px;">Operational & Revenue Tracking Framework — Mata Angin</h3>
+                <span style="font-size: 11px; background: #ea580c; padding: 2px 8px; border-radius: 10px; font-weight: bold; width: fit-content;">Work in Progress</span>
+                <h3 style="margin-top: 10px;">Operational & Revenue Tracking Framework</h3>
                 <p>
-                    Designing an end-to-end inventory turnover and real-time tracking architecture for asset management (rented, washing, damaged status). Developing structural cash flow trend models and localized operational employee KPI tracking systems.
+                    Designing an end-to-end inventory turnover and real-time tracking architecture for asset management (rented, washing, damaged status). Developing structural cash flow trend models.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Operational-Revenue-Tracking-Framework-Mata-Angin-Work-in-Progress-" target="_blank">
-                    Ongoing Assessment Phase
-                </a>
+                <a href="https://github.com/raflyalvish-id/Operational-Revenue-Tracking-Framework-Mata-Angin-Work-in-Progress-" target="_blank">Ongoing Assessment Phase <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
       
@@ -349,54 +548,45 @@ footer {
             <div class="content">
                 <h3>Grocery Supermarket ETL Pipeline</h3>
                 <p>
-                    Built an end-to-end data pipeline using PostgreSQL to ingest raw transaction data, perform data cleansing, model a Star Schema warehouse, and automate aggregation daily for Power BI consumption.
+                    Built an end-to-end data pipeline using PostgreSQL to ingest raw transaction data, perform data cleansing, model a Star Schema warehouse, and automate aggregation daily for Power BI.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Grocery-Supermarket-End-to-End-ETL-Pipeline-using-PostgreSQ" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/Grocery-Supermarket-End-to-End-ETL-Pipeline-using-PostgreSQ" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
 
         <!-- CUSTOMER BEHAVIOR -->
         <div class="project">
-            <img src="images/customer_behavior.png">
+            <img src="images/customer_behavior.png" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
                 <h3>Customer Behavior & Sales Analysis</h3>
                 <p>
-                    End-to-end analysis using RFM segmentation and Market Basket Analysis 
-                    to identify revenue drivers and product bundling opportunities.
+                    End-to-end analysis using RFM segmentation and Market Basket Analysis to identify revenue drivers and product bundling opportunities.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Customer-Behavior-Product-Association-Analysis" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/Customer-Behavior-Product-Association-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
 
       <!-- SOCIAL MEDIA ENGAGEMENT ANALYSIS -->
         <div class="project">
-            <img src="images/social_media_preview.png" alt="Social Media Analysis Preview" onerror="this.src='images/customer_behavior.png';">
+            <img src="images/social_media_preview.png" alt="Social Media Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
                 <h3>Social Media Cross-Platform Analytics</h3>
                 <p>
                     Evaluated 726K+ interactions across X, Instagram, TikTok, and YouTube using advanced DAX modeling. Analyzed organic vs. paid efficiency, content formats, and audience behavior trends.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Social-Media-Multichannel-Engagement-Analysis" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/Social-Media-Multichannel-Engagement-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
       
       <!-- GOOGLE CAMPAIGN PERFORMANCE ANALYSIS -->
         <div class="project">
-            <img src="images/google_campaign_preview.png" alt="Google Campaign Analysis Preview" onerror="this.src='images/customer_behavior.png';">
+            <img src="images/google_campaign_preview.png" alt="Google Campaign Analysis Preview" onerror="this.src='images/Preview-dashboard.png';">
             <div class="content">
                 <h3>Google Campaign Performance Analysis</h3>
                 <p>
-                    Evaluated Google Merchandise Store marketing campaigns using GA4 Explore. Conducted session trend anomaly detection, user acquisition audits, and evaluated campaigns across conversion and bounce rates.
+                    Evaluated Google Merchandise Store marketing campaigns using GA4 Explore. Conducted session trend anomaly detection, user acquisition audits, and evaluated conversion rates.
                 </p>
-                <a href="https://github.com/raflyalvish-id/Google-Merchandise-Store-Campaign-Performance-Analysis" target="_blank">
-                    View Project
-                </a>
+                <a href="https://github.com/raflyalvish-id/Google-Merchandise-Store-Campaign-Performance-Analysis" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
       
@@ -405,8 +595,8 @@ footer {
             <img src="images/Preview-dashboard.png">
             <div class="content">
                 <h3>AdventureWorks Dashboard</h3>
-                <p>Interactive dashboard to monitor sales performance and KPIs.</p>
-                <a href="https://github.com/raflyalvish-id/Adventure-Works-Dashboard" target="_blank">View Project</a>
+                <p>Interactive dashboard to monitor sales performance and KPIs to streamline business reporting.</p>
+                <a href="https://github.com/raflyalvish-id/Adventure-Works-Dashboard" target="_blank">View Project <i class="fa-solid fa-arrow-right" style="font-size: 12px; margin-left: 5px;"></i></a>
             </div>
         </div>
 
@@ -433,7 +623,7 @@ footer {
       
         <!-- SQL -->
         <div class="project">
-            <img src="images/certificate/sql_hackerrank.jpeg">
+            <img src="images/certificate/sql_hackerrank.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>SQL (Intermediate) – HackerRank</h3>
                 <p>
@@ -445,11 +635,11 @@ footer {
 
         <!-- IBM DATA ANALYTICS -->
         <div class="project">
-            <img src="images/certificate/introduction_DA.jpeg">
+            <img src="images/certificate/introduction_DA.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
-                <h3>Introduction to Data Analytics – IBM (Coursera)</h3>
+                <h3>Introduction to Data Analytics – IBM</h3>
                 <p>
-                    Learned data analysis fundamentals, data cleaning, and data-driven decision making.
+                    Learned data analysis fundamentals, data cleaning, and data-driven decision making via Coursera.
                 </p>
                 <a href="https://www.coursera.org/account/accomplishments/verify/0DHIZTEZCWME" target="_blank">View Certificate</a>
             </div>
@@ -457,7 +647,7 @@ footer {
 
         <!-- ENGLISH -->
         <div class="project">
-            <img src="images/certificate/ef_set.jpeg">
+            <img src="images/certificate/ef_set.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>EF SET English Certificate (B2)</h3>
                 <p>
@@ -469,7 +659,7 @@ footer {
 
         <!-- IC3 -->
         <div class="project">
-            <img src="images/certificate/IC3.jpeg">
+            <img src="images/certificate/IC3.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>IC3 Digital Literacy Certification</h3>
                 <p>
@@ -481,19 +671,19 @@ footer {
 
         <!-- MSIB -->
         <div class="project">
-            <img src="images/certificate/PUPR.jpeg">
+            <img src="images/certificate/PUPR.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>MSIB Certified Internship Program</h3>
                 <p>
                     Completed internship in spatial planning and data-driven regional development analysis.
                 </p>
-                <a href="https://www.linkedin.com/in/raflyalvish/overlay/Position/2339626999/treasury/?profileId=ACoAAER7zd0B--6uLiC0zGYpCXopykvvy7DQqus" target="_blank">View Certificate</a>
+                <a href="https://www.linkedin.com/in/raflyalvish/" target="_blank">View Certificate</a>
             </div>
         </div>
 
         <!-- BNSP -->
         <div class="project">
-            <img src="images/certificate/PJ_BNSP.jpeg">
+            <img src="images/certificate/PJ_BNSP.jpeg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>BNSP – Remote Sensing Technician</h3>
                 <p>
@@ -506,7 +696,7 @@ footer {
 
         <!-- ACHIEVEMENT -->
         <div class="project">
-            <img src="images/certificate/infografis.jpg">
+            <img src="images/certificate/infografis.jpg" onerror="this.src='images/certificate/infografis.jpg';">
             <div class="content">
                 <h3>1st Place – National Infographic Competition</h3>
                 <p>
@@ -522,8 +712,16 @@ footer {
 <!-- CONTACT -->
 <section id="contact">
     <h2>Contact</h2>
-    <p>Email: muhraflyalviansyah@gmail.com</p>
-    <p>Whatsapp: +62-813-8057-1174</p>
+    <div style="background: rgba(255,255,255,0.03); padding: 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.08);">
+        <p style="margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-solid fa-envelope" style="color:#38bdf8; font-size: 20px;"></i>
+            <a href="mailto:muhraflyalviansyah@gmail.com" style="color: white; text-decoration: none;">muhraflyalviansyah@gmail.com</a>
+        </p>
+        <p style="margin: 0; display: flex; align-items: center; gap: 10px;">
+            <i class="fa-brands fa-whatsapp" style="color:#38bdf8; font-size: 20px;"></i>
+            <span style="color: white;">+62-813-8057-1174</span>
+        </p>
+    </div>
 </section>
 
 <footer>
@@ -532,7 +730,7 @@ footer {
 
 <!-- SCROLL ANIMATION -->
 <script>
-const projects = document.querySelectorAll('.project');
+const elementsToAnimate = document.querySelectorAll('.project');
 
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -540,9 +738,9 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('show');
         }
     });
-});
+}, { threshold: 0.1 });
 
-projects.forEach(project => observer.observe(project));
+elementsToAnimate.forEach(el => observer.observe(el));
 </script>
 
 </body>
